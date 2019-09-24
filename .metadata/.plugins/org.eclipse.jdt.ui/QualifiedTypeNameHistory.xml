@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.springframework.vault.config.AbstractVaultConfiguration"/>
+<fullyQualifiedTypeName name="org.springframework.vault.authentication.ClientAuthentication"/>
+<fullyQualifiedTypeName name="org.springframework.vault.authentication.TokenAuthentication"/>
+<fullyQualifiedTypeName name="org.springframework.vault.client.VaultEndpoint"/>
+<fullyQualifiedTypeName name="org.springframework.vault.core.VaultTemplate"/>
+<fullyQualifiedTypeName name="org.springframework.vault.support.VaultResponseSupport"/>
+<fullyQualifiedTypeName name="java.net.URISyntaxException"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="com.example.first.DemoApplication"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="com.example.first.CredentialsService"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="org.springframework.vault.authentication.AwsIamAuthenticationOptions"/>
+<fullyQualifiedTypeName name="org.springframework.vault.authentication.AwsIamAuthentication"/>
+<fullyQualifiedTypeName name="com.amazonaws.auth.InstanceProfileCredentialsProvider"/>
+<fullyQualifiedTypeName name="com.example.first.VaultConfig"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+<fullyQualifiedTypeName name="com.example.first.Credentials"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+</qualifiedTypeNameHistroy>

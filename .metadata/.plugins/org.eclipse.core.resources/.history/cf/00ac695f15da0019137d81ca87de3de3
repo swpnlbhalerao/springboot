@@ -1,0 +1,16 @@
+package com.profile.example;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class DevConfig {
+
+	
+	
+	@PostConstruct
+	public void test(){
+		System.out.println("hello World");
+	}
+}

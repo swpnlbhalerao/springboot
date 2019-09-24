@@ -1,0 +1,66 @@
+package com.example.first;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Service;
+import org.springframework.vault.authentication.AwsIamAuthentication;
+import org.springframework.vault.authentication.AwsIamAuthenticationOptions;
+import org.springframework.vault.authentication.ClientAuthentication;
+import org.springframework.vault.authentication.TokenAuthentication;
+import org.springframework.vault.client.VaultEndpoint;
+import org.springframework.vault.config.AbstractVaultConfiguration;
+
+import com.amazonaws.auth.InstanceProfileCredentialsProvider;
+
+@Configuration
+public class VaultConfig extends AbstractVaultConfiguration {
+	/*
+	 * @Override public ClientAuthentication clientAuthentication() { return new
+	 * TokenAuthentication("s.9SbUslAQkflyqi0dUwli6xKB"); }
+	 */
+	@Override
+	public VaultEndpoint vaultEndpoint() {
+
+		VaultEndpoint endpoint = new VaultEndpoint();
+		endpoint.setHost("3.223.144.128");
+		endpoint.setPort(8200);
+		endpoint.setScheme("http");
+		return endpoint;
+	}
+	
+	 @Override
+	    public ClientAuthentication clientAuthentication() {
+
+	        AwsIamAuthenticationOptions options = AwsIamAuthenticationOptions.builder()
+	                .credentialsProvider(InstanceProfileCredentialsProvider.getInstance()).build();
+//	        System.out.println("Options"+options.getCredentialsProvider().getCredentials().getAWSAccessKeyId());
+//	        System.out.println("Options"+options.getCredentialsProvider().getCredentials().getAWSSecretKey());	        
+	        
+	        return new AwsIamAuthentication(options, restOperations());
+	    }
+	
+	/*
+	 * @Override public ClientAuthentication clientAuthentication() {
+	 * 
+	 * AwsIamAuthenticationOptions options = AwsIamAuthenticationOptions.builder()
+	 * .credentialsProvider(InstanceProfileCredentialsProvider.getInstance()).build(
+	 * );
+	 * System.out.println("Options"+options.getCredentialsProvider().getCredentials(
+	 * ).getAWSAccessKeyId());
+	 * System.out.println("Options"+options.getCredentialsProvider().getCredentials(
+	 * ).getAWSSecretKey()); AwsIamAuthentication aws=new
+	 * AwsIamAuthentication(options, restOperations());
+	 * //System.out.println("Vault Token"+aws.login().getToken()); return aws; }
+	 */
+	  
+	  
+	
+	  public void test() { AwsIamAuthenticationOptions options =
+	  AwsIamAuthenticationOptions.builder()
+	  .credentialsProvider(InstanceProfileCredentialsProvider.getInstance()).build(
+	  );
+	  System.out.println("Options"+options.getCredentialsProvider().getCredentials(
+	  ).getAWSAccessKeyId());
+	  System.out.println("Options"+options.getCredentialsProvider().getCredentials(
+	  ).getAWSSecretKey()); }
+	 
+}

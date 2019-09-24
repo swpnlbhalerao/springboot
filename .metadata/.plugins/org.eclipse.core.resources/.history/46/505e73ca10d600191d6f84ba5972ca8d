@@ -1,0 +1,41 @@
+package com.example.first;
+
+
+
+import java.net.URISyntaxException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+
+
+@Controller
+public class TestController {
+
+@Autowired
+private CredentialsService c;
+
+
+
+	@RequestMapping("/")
+	public String  test() throws URISyntaxException{
+		System.out.println("hi");
+		c.accessCredentials();
+		return "null";
+	}
+	/*
+	 * @RequestMapping("/add") public String addPerson(Person person){
+	 * personRepo.save(person); return "test.jsp"; }
+	 */
+
+	@GetMapping("/hello")
+	public String hello() {
+		Credentials cred=new Credentials();
+		cred.setExcited("yes");
+		cred.setName("Swapnil");
+		return cred.toString();
+	}
+}
